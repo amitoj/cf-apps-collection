@@ -6,4 +6,11 @@ applications:
   path: target/cf-app-2-0.0.1-SNAPSHOT.jar
   buildpack: https://github.com/cloudfoundry/java-buildpack
   env:
+    SPRING_PROFILES_ACTIVE: cloud
     JBP_CONFIG_SPRING_AUTO_RECONFIGURATION: '{enabled: false}'
+  services:
+  - cf-app-mysql
+
+
+
+
