@@ -1,7 +1,7 @@
 ---
 applications:
-- name: cf-demo-1
+- name: cf-app-1
   instances: 1
   memory: 1024M
-  path: target/cf-demo-1-0.0.1-SNAPSHOT.jar
+  path: target/cf-app-1-0.0.1-SNAPSHOT.jar
   buildpack: https://github.com/cloudfoundry/java-buildpack
