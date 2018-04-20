@@ -3,9 +3,8 @@ spring:
     name: test-app
   cloud:
     cloudfoundry:
-      discovery:
-        username: admin
-        password: admin
+      username: admin
+      password: admin
       org: pcfdev-org
       space: pcfdev-space
       url: api.local.pcfdev.io
