@@ -8,4 +8,4 @@ spring:
       org: pcfdev-org
       space: pcfdev-space
       url: api.local.pcfdev.io
-
+      skip-ssl-validation: true
