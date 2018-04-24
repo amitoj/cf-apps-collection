@@ -1,0 +1,10 @@
+---
+applications:
+- name: cf-app-4
+  instances: 1
+  memory: 512M
+  path: target/cf-app.jar
+  buildpack: https://github.com/cloudfoundry/java-buildpack
+  env:
+    SPRING_PROFILES_ACTIVE: cloud
+    JBP_CONFIG_SPRING_AUTO_RECONFIGURATION: '{enabled: false}'
