@@ -12,6 +12,8 @@ https://github.com/joshlong/agileindia-2018/blob/8e2dd1ee7bcbb57138acfdcaeb1e735
 
 ## cf-app-3: Read services and instances info from CF target
 
-## cf-app-4: SpringBootTrader
-https://github.com/pivotal-bank/cf-SpringBootTrader
+## cf-app-4: Test log output
+cf push --health-check-type none
+
+
 
