@@ -8,5 +8,7 @@
     <artifactId>cf-apps-collection</artifactId>
     <version>1.4-SNAPSHOT</version>
 
-
+    <modules>
+        <module>cf-service-1</module>
+    </modules>
 </project>
