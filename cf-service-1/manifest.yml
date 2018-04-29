@@ -1,0 +1,5 @@
+---
+applications:
+- name: xyz-service-broker
+  memory: 1G
+  path: target/xyz-service.jar
