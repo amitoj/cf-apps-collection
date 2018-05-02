@@ -18,3 +18,12 @@ cf push --health-check-type none
 
 ## cf-service-1: Open Service Broker
 
+`cf push`
+`curl -k https://xyz-service-broker.local.pcfdev.io/v2/catalog -u admin:admin`
+`cf create-service-broker xyz admin admin https://xyz-service-broker.local.pcfdev.io`
+`cf enable-service-access xyz`
+`cf m`
+`cf m -s xyz`
+`cf create-service xyz standard my-xyz`
+`cf s`
+`cf service my-xyz`
