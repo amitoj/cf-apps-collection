@@ -9,6 +9,11 @@
     <version>1.4-SNAPSHOT</version>
 
     <modules>
+        <module>cf-app-1</module>
+        <module>cf-app-2</module>
+        <module>cf-app-3</module>
+        <module>cf-app-4</module>
         <module>cf-service-1</module>
+        <module>cf-app-5</module>
     </modules>
 </project>
