@@ -88,6 +88,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
         </plugins>
+        <finalName>cf-app</finalName>
     </build>
 
     <repositories>
