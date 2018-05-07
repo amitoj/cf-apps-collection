@@ -1,4 +1,4 @@
-ssoServiceUrl: http://localhost:8080/uaa
+ssoServiceUrl: https://uaa.local.pcfdev.io
 
 server:
   port: 8888
