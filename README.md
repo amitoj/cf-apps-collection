@@ -53,11 +53,18 @@ Digital Ocean UAA Guide - - https://www.digitalocean.com/community/tutorials/an-
 >  }
 - `uaac client add client1  \
     --name client1 \
-    --scope resource.read, resource.write, openid, profile, email, address, phone \
+    --scope resource.read,resource.write,openid,profile,email,address,phone \
     -s client1 \
-    --authorized_grant_types authorization_code, refresh_token, client_credentials, password \
+    --authorized_grant_types authorization_code,refresh_token,client_credentials,password \
     --authorities uaa.resource \
     --redirect_uri http://localhost:8888/**`
+- `uaac client add client1  \
+    --name client1 \
+    --scope resource.read,resource.write,openid,profile,email,address,phone \
+    -s client1 \
+    --authorized_grant_types authorization_code,refresh_token,client_credentials,password \
+    --authorities uaa.resource \
+    --redirect_uri http://cf-app-5.local.pcfdev.io/**`
 
 - SpringBoot app server running at port 8888 / oauth2-boot2-legacy
 - `uaac user add user1 -p user1 --emails user1@user1.com`
