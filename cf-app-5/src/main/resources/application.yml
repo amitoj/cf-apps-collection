@@ -1,4 +1,4 @@
-ssoServiceUrl: https://uaa.v3.pcfdev.io
+ssoServiceUrl: https://uaa.bosh-lite.com
 
 spring:
   thymeleaf:
