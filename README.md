@@ -34,7 +34,9 @@ Following the blog
 - http://www.java-allandsundry.com/2017/02/bootstrapping-oauth2-authorization.html
 - http://www.java-allandsundry.com/2018/02/spring-boot-2-applications-and-oauth-2_26.html
 
-Digital Ocean UAA Guide - - https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2#grant-type-authorization-code
+Digital Ocean UAA Guide - https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2#grant-type-authorization-code
+
+Authentication and Authorization: OpenID vs OAuth2 vs SAML - https://spin.atomicobject.com/2016/05/30/openid-oauth-saml/
 
 - `uaac target https://uaa.local.pcfdev.io --skip-ssl-validation`
 - `uaac token client get admin -s admin-client-secret`
