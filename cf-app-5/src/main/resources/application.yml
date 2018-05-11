@@ -1,7 +1,5 @@
-ssoServiceUrl: https://uaa.local.pcfdev.io
+ssoServiceUrl: https://uaa.bosh-lite.com
 
-server:
-  port: 8888
 spring:
   thymeleaf:
     cache: false
