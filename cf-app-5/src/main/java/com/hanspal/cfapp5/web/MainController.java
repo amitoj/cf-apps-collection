@@ -44,6 +44,7 @@ public class MainController {
         return "index";
     }
 
+
     @GetMapping("/secured/show_token")
     public String authCode(Model model /*, HttpServletRequest request*/) {
         OAuth2Authentication auth = (OAuth2Authentication) SecurityContextHolder.getContext().getAuthentication();
