@@ -12,10 +12,7 @@ import org.springframework.security.oauth2.provider.authentication.OAuth2Authent
 import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -62,7 +59,9 @@ public class MainController {
         log.info("tokenValue = {}", tokenValue);
 
         if (tokenValue != null) {
-            model.addAttribute("access_token", tokenBeautifier.formatJwtToken(tokenValue));
+            String formattedToken = tokenBeautifier.formatJwtToken(tokenValue);
+            log.info("formattedToken = {}", formattedToken);
+            model.addAttribute("access_token", formattedToken);
         }
         return "show_token";
     }

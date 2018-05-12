@@ -15,5 +15,6 @@
         <module>cf-app-4</module>
         <module>cf-service-1</module>
         <module>cf-app-5</module>
+        <module>cf-app-5r</module>
     </modules>
 </project>
