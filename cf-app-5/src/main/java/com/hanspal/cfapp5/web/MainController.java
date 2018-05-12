@@ -8,6 +8,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.oauth2.provider.OAuth2Authentication;
 import org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationDetails;
 import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -21,7 +22,8 @@ import java.io.IOException;
 import java.net.URL;
 
 
-@RestController
+//@RestController
+@Controller
 public class MainController {
 
     @Value("${ssoServiceUrl: placeholder}")
@@ -46,7 +48,7 @@ public class MainController {
 
 
     @GetMapping("/secured/show_token")
-    public String authCode(Model model /*, HttpServletRequest request*/) {
+    public String authCode(Model model, HttpServletRequest request) {
         OAuth2Authentication auth = (OAuth2Authentication) SecurityContextHolder.getContext().getAuthentication();
         OAuth2AuthenticationDetails details = (OAuth2AuthenticationDetails) auth.getDetails();
         String tokenValue = details.getTokenValue();

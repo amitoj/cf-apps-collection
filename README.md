@@ -78,4 +78,7 @@ Authentication and Authorization: OpenID vs OAuth2 vs SAML - https://spin.atomic
 - `uaac member add resource.write user1` 
 
 
+Try     SPRING_PROFILES_ACTIVE = pcf / cf / bosh-lite       for various CF environments
+
+
 
