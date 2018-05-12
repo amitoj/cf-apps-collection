@@ -1,6 +1,8 @@
 package com.hanspal.cfapp5.web;
 
 import com.hanspal.cfapp5.service.TokenBeautifier;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.Authentication;
@@ -32,7 +34,6 @@ public class MainController {
     @Value("${security.oauth2.client.clientId: client1}")
     private String clientId;
 
-
     @Autowired
     private TokenBeautifier tokenBeautifier;
 
@@ -46,12 +47,19 @@ public class MainController {
         return "index";
     }
 
+    private Logger log = LoggerFactory.getLogger(this.getClass());
+
 
     @GetMapping("/secured/show_token")
     public String authCode(Model model, HttpServletRequest request) {
         OAuth2Authentication auth = (OAuth2Authentication) SecurityContextHolder.getContext().getAuthentication();
+        log.info("auth = {}", auth);
+
         OAuth2AuthenticationDetails details = (OAuth2AuthenticationDetails) auth.getDetails();
+        log.info("details = {}", details);
+
         String tokenValue = details.getTokenValue();
+        log.info("tokenValue = {}", tokenValue);
 
         if (tokenValue != null) {
             model.addAttribute("access_token", tokenBeautifier.formatJwtToken(tokenValue));
