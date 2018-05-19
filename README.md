@@ -34,9 +34,11 @@ Following the blog
 - http://www.java-allandsundry.com/2017/02/bootstrapping-oauth2-authorization.html
 - http://www.java-allandsundry.com/2018/02/spring-boot-2-applications-and-oauth-2_26.html
 
-Digital Ocean UAA Guide - https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2#grant-type-authorization-code
+Digital Ocean UAA Guide 
+- https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2#grant-type-authorization-code
 
-Authentication and Authorization: OpenID vs OAuth2 vs SAML - https://spin.atomicobject.com/2016/05/30/openid-oauth-saml/
+Authentication and Authorization: OpenID vs OAuth2 vs SAML 
+- https://spin.atomicobject.com/2016/05/30/openid-oauth-saml/
 
 - `uaac target https://uaa.local.pcfdev.io --skip-ssl-validation`
 - `uaac token client get admin -s admin-client-secret`
@@ -80,5 +82,48 @@ Authentication and Authorization: OpenID vs OAuth2 vs SAML - https://spin.atomic
 
 Try     SPRING_PROFILES_ACTIVE = pcf / cf / bosh-lite       for various CF environments
 
+
+## cf-app-5r: UAA OAuth2 + Spring 5 integration
+
+Spring 5 Security - https://spring.io/blog/2018/03/06/using-spring-security-5-to-integrate-with-oauth-2-secured-services-such-as-facebook-and-github
+
+OAuth 2 clients are prefixed with spring.security.oauth2.client.registration
+
+spring.security.oauth2.client.registration.uaa.clientName               = oauth2-sample-client
+spring.security.oauth2.client.registration.uaa.client-id                = client1
+spring.security.oauth2.client.registration.uaa.client-secret            = client1
+spring.security.oauth2.client.registration.uaa.authorizationGrantType   = authorization_code
+spring.security.oauth2.client.registration.uaa.redirect_uri_template    = "{baseUrl}/login/oauth2/code/{registrationId}"
+spring.security.oauth2.client.registration.uaa.scope                    = resource.read, resource.write, openid, profile
+
+
+- https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-security.html
+
+- OAuth 2 client dependency required
+
+OAuth2 scope (https://docs.apigee.com/api-platform/security/oauth/working-scopes)
+- scopes provide a way to limit the amount of access that is granted to an access token
+- READ or READ / WRITE access
+- can name your scopes anything you wish
+- complex cases, best to assign each scope a unique name, in the form of a URN. Example - urn:examplecompany:product_price:update
+
+
+OAuth vs JWT
+- https://zapier.com/engineering/apikey-oauth-jwt/
+- https://stackoverflow.com/questions/39909419/jwt-vs-oauth-authentication
+- https://auth0.com/learn/json-web-tokens/
+
+
+
+Read this later
+- https://docs.pivotal.io/spring-cloud-services/1-2/security-overview.html
+- http://docs.pivotal.io/spring-cloud-services/1-5/common/security-overview.html
+
+
+
+## cf-app-6a: CORS Spring Boot app
+
+## cf-app-6b: CORS AngularJS app
+- used AngularJS for brevity of code
 
 

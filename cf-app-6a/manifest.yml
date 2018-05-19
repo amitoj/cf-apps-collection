@@ -1,0 +1,7 @@
+---
+applications:
+- name: cf-app-6a
+  instances: 1
+  memory: 1G
+  path: target/cf-app.jar
+  buildpack: https://github.com/cloudfoundry/java-buildpack

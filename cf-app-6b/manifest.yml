@@ -1,0 +1,5 @@
+---
+applications:
+- name: cf-app-6b
+  instances: 1
+  buildpack: https://github.com/cloudfoundry/staticfile-buildpack
