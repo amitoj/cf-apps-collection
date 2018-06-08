@@ -127,3 +127,19 @@ Read this later
 - used AngularJS for brevity of code
 
 
+## cf-service-xxx: Mongo service broker
+
+https://github.com/spring-cloud-samples/cloudfoundry-service-broker
+
+- git clone https://github.com/cloudfoundry-community/mongodb-bosh-release.git
+- cd mongodb-bosh-release/
+- eval $(cf dev bosh env)
+- bosh create-release --force
+- bosh upload-release
+- < replace stemcell name > vi examples/mongodb3-release.manifest
+- bosh -d mongodb3 deploy examples/mongodb3-release.manifest
+- bosh vms
+- ERROR -> bosh -d mongodb3 run-errand replset --keep-alive
+  
+  
+  

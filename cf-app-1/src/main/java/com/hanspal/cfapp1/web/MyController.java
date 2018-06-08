@@ -9,7 +9,7 @@ import java.util.Date;
 import java.util.UUID;
 
 @RestController
-@RequestMapping("/mytest")
+@RequestMapping("/")
 public class MyController {
 
     @GetMapping
